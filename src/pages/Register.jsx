@@ -12,6 +12,8 @@ import {
   Paper,
   Title,
   Group,
+  Text,   // <--- Added this
+  Anchor  // <--- Added this
 } from "@mantine/core";
 
 export default function Register() {
@@ -97,6 +99,15 @@ export default function Register() {
             </Button>
           </Group>
         </form>
+
+        {/* --- NAVIGATION LINK ADDED HERE --- */}
+        <Text ta="center" mt="md" size="sm">
+          Already have an account?{' '}
+          <Anchor component="button" onClick={() => navigate('/login')}>
+            Login
+          </Anchor>
+        </Text>
+
       </Paper>
     </div>
   );
